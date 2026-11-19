@@ -2,13 +2,13 @@
 
 Chrome extension that puts tabs into tab groups from rules you write. The first matching rule wins. A site with no rule can still get its own group once enough tabs from that site are open.
 
-Chrome 116 or newer. No build step. The packed extension is [AutoTab-Organizer.crx](https://github.com/developer-vm-two/autotab-organizer/releases/latest/download/AutoTab-Organizer.crx).
+Chrome 116 or newer. No build step. The packed extension is [AutoTab-Organizer.crx](https://github.com/aansourav/AutoTab-Organizer/releases/latest/download/AutoTab-Organizer.crx).
 
 ![Popup with four groups in the current window](docs/popup.png)
 
 ## Install
 
-Download [AutoTab-Organizer.crx](https://github.com/developer-vm-two/autotab-organizer/releases/latest/download/AutoTab-Organizer.crx) from the [latest release](https://github.com/developer-vm-two/autotab-organizer/releases/latest). On `chrome://extensions`, turn on Developer mode and drag the file onto the page.
+Download [AutoTab-Organizer.crx](https://github.com/aansourav/AutoTab-Organizer/releases/latest/download/AutoTab-Organizer.crx) from the [latest release](https://github.com/aansourav/AutoTab-Organizer/releases/latest). On `chrome://extensions`, turn on Developer mode and drag the file onto the page.
 
 Chrome often refuses a `.crx` that did not come from the Chrome Web Store. If the drag is blocked, choose Load unpacked and select this folder, the one that contains `manifest.json`. Do not select `src` on its own.
 
