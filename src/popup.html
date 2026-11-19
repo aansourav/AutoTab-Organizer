@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AutoTab Organizer</title>
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="mast">
+      <img src="../icons/icon48.png" width="32" height="32" alt="" />
+      <div>
+        <h1>AutoTab</h1>
+        <p>Groups tabs by the rules you set.</p>
+      </div>
+    </header>
+
+    <div class="switch-row">
+      <div>
+        <p class="switch-label" id="auto-label">Auto-organize</p>
+        <p class="hint" id="hint"></p>
+      </div>
+      <button
+        type="button"
+        class="switch"
+        id="auto-organize"
+        role="switch"
+        aria-checked="true"
+        aria-labelledby="auto-label"
+      >
+        <span class="thumb"></span>
+      </button>
+    </div>
+
+    <div class="stats">
+      <p>
+        <strong id="tab-count">–</strong>
+        <span>open in this window</span>
+      </p>
+      <p>
+        <strong id="group-count">–</strong>
+        <span>groups</span>
+      </p>
+    </div>
+
+    <ul id="group-list" class="group-list" hidden aria-label="Groups in this window"></ul>
+
+    <div class="actions">
+      <button type="button" id="organize-window">Organize this window</button>
+      <button type="button" id="organize-all">Organize all windows</button>
+      <button type="button" id="collapse">Collapse other groups</button>
+      <button type="button" id="ungroup" class="danger">Ungroup all</button>
+    </div>
+
+    <p class="status" id="status" role="status"></p>
+
+    <footer>
+      <button type="button" id="add-rule">Rule for this tab</button>
+      <button type="button" id="open-settings">Settings</button>
+    </footer>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

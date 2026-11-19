@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AutoTab rules</title>
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <header class="mast">
+      <img src="../icons/icon128.png" width="44" height="44" alt="" />
+      <div>
+        <h1>AutoTab</h1>
+        <p class="lede">
+          Rules decide which tabs share a group. The first match wins. A domain
+          matches that site and its subdomains. <code>*.google.com</code> is a
+          wildcard. <code>github.com/pulls</code> matches that path. A word with
+          no dot matches anywhere in the address.
+        </p>
+      </div>
+    </header>
+
+    <h2>Settings</h2>
+    <div class="settings">
+      <label class="check">
+        <input id="auto-organize" type="checkbox" />
+        <span>Auto-organize new tabs</span>
+      </label>
+      <label class="check">
+        <input id="auto-domain" type="checkbox" />
+        <span>Group unmatched sites</span>
+      </label>
+      <label class="threshold">
+        <span>Minimum tabs from one site</span>
+        <input
+          id="threshold"
+          type="number"
+          min="1"
+          max="50"
+          step="1"
+          inputmode="numeric"
+          placeholder="2"
+        />
+      </label>
+      <label class="check">
+        <input id="ignore-pinned" type="checkbox" checked disabled />
+        <span>Skip pinned tabs</span>
+      </label>
+    </div>
+    <p class="note">
+      Chrome refuses to put pinned tabs in a group, so they always stay put.
+    </p>
+
+    <div class="rules-heading">
+      <h2>Rules</h2>
+      <button type="button" id="add-rule" class="primary">Add rule</button>
+    </div>
+    <p class="note">
+      Higher rules win. Move a rule up when it should beat a broader one. Pick
+      any color with the swatch, a hex value, or RGB. Chrome's tab strip only
+      has nine colors, so the group uses the nearest one.
+    </p>
+    <div id="rules"></div>
+
+    <p class="status" id="status" role="status"></p>
+
+    <div class="io">
+      <button type="button" id="export" class="quiet">Export rules</button>
+      <button type="button" id="import" class="quiet">Import rules</button>
+      <input
+        id="import-file"
+        class="visually-hidden"
+        type="file"
+        accept="application/json,.json"
+      />
+    </div>
+
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

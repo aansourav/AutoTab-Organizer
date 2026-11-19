@@ -1,0 +1,175 @@
+body {
+  width: 360px;
+}
+
+.mast {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 16px 16px 8px;
+}
+
+.mast img {
+  flex: none;
+  border-radius: 8px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.mast p,
+.hint,
+.status {
+  margin: 2px 0 0;
+  color: var(--steel);
+  font-size: 13px;
+}
+
+.switch-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 16px;
+}
+
+.switch-label {
+  margin: 0;
+  font-weight: 650;
+}
+
+.switch {
+  width: 48px;
+  height: 28px;
+  flex: none;
+  border: 0;
+  border-radius: 999px;
+  background: var(--track);
+  padding: 3px;
+}
+
+.switch[aria-checked='true'] {
+  background: var(--signal);
+}
+
+.thumb {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  transition: transform 160ms ease;
+}
+
+.switch[aria-checked='true'] .thumb {
+  transform: translateX(20px);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 4px 16px 14px;
+}
+
+.stats p {
+  margin: 0;
+}
+
+.stats strong {
+  display: block;
+  font-size: 28px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.stats span {
+  color: var(--steel);
+  font-size: 13px;
+}
+
+.group-list {
+  list-style: none;
+  max-height: 132px;
+  margin: 0;
+  overflow: auto;
+  padding: 0 16px 8px;
+}
+
+.group-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  padding: 3px 0;
+  font-size: 13px;
+}
+
+.group-list li span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.group-list .dot {
+  width: 10px;
+  height: 10px;
+  flex: none;
+  border-radius: 50%;
+}
+
+.actions {
+  padding: 0 16px;
+}
+
+.actions button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--line);
+  padding: 12px 2px;
+}
+
+.actions button:hover:not(:disabled) {
+  color: var(--signal);
+}
+
+.actions button:active:not(:disabled) {
+  background: var(--panel);
+}
+
+.actions .danger {
+  color: var(--clay);
+}
+
+.actions .danger:hover:not(:disabled) {
+  color: var(--clay);
+}
+
+.status {
+  min-height: 1.2em;
+  padding: 8px 16px 0;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 4px 16px 14px;
+}
+
+footer button {
+  background: none;
+  border: 0;
+  color: var(--signal);
+  padding: 8px 0;
+}

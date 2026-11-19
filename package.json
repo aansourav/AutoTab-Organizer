@@ -1,0 +1,13 @@
+{
+  "name": "autotab-organizer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "icons": "node scripts/generate-icons.mjs",
+    "test": "node scripts/generate-icons.mjs && node --check src/popup.js && node --check src/options.js && node --check src/background.js && node --test tests/**/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
