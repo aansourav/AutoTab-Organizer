@@ -2,15 +2,15 @@
 
 Chrome extension that puts tabs into tab groups from rules you write. The first matching rule wins. A site with no rule can still get its own group once enough tabs from that site are open.
 
-Chrome 116 or newer. No build step. The packed extension is [AutoTab-Organizer.crx](https://github.com/aansourav/AutoTab-Organizer/releases/latest/download/AutoTab-Organizer.crx).
+Chrome 116 or newer. No build step. Download [AutoTab-Organizer.zip](https://github.com/aansourav/AutoTab-Organizer/releases/latest/download/AutoTab-Organizer.zip).
 
 ![Popup with four groups in the current window](docs/popup.png)
 
 ## Install
 
-Download [AutoTab-Organizer.crx](https://github.com/aansourav/AutoTab-Organizer/releases/latest/download/AutoTab-Organizer.crx) from the [latest release](https://github.com/aansourav/AutoTab-Organizer/releases/latest). On `chrome://extensions`, turn on Developer mode and drag the file onto the page.
+Download [AutoTab-Organizer.zip](https://github.com/aansourav/AutoTab-Organizer/releases/latest/download/AutoTab-Organizer.zip) from the [latest release](https://github.com/aansourav/AutoTab-Organizer/releases/latest). Unzip it. On `chrome://extensions`, turn on Developer mode, choose Load unpacked, and select the unzipped folder. That folder is the one that contains `manifest.json`. Do not select `src` on its own.
 
-Chrome often refuses a `.crx` that did not come from the Chrome Web Store. If the drag is blocked, choose Load unpacked and select this folder, the one that contains `manifest.json`. Do not select `src` on its own.
+Clicking a `.crx` from GitHub shows `CRX_REQUIRED_PROOF_MISSING`. Chrome only installs a packed file that came from the Chrome Web Store. Load unpacked is the install that works.
 
 The same folder is the unpacked extension, so a reload of the extension card picks up source changes. Incognito windows stay out until you allow the extension on its card.
 
